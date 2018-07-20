@@ -20,6 +20,7 @@ pipeline{
 
 				sh 'node --version'
 				sh 'svn --version'
+				sleep 30
 
 			}
 		}
