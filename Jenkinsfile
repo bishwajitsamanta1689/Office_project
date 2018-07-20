@@ -4,7 +4,12 @@ pipeline{
 	
 	agent{
 
-		dockerfile true 
+		dockerfile {
+
+			args ' -u 0:0 --name=someblahblah -v /etc/passwd:/etc/passwd -v /etc/group:/etc/group '
+			reuseNode true
+			
+		} 
 	}
 
 	stages {
